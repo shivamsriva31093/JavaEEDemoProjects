@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="bushopper">
+      <Current>1</Current>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="movies"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="sakila"/>
+    <schema id="8" parent="1" name="test">
+      <Visible>1</Visible>
+    </schema>
+    <schema id="9" parent="1" name="user"/>
+    <schema id="10" parent="1" name="wn_pro_mysql"/>
+    <schema id="11" parent="1" name="world"/>
+    <table id="12" parent="8" name="auth_tb"/>
+    <table id="13" parent="8" name="test_table"/>
+    <routine id="14" parent="8" name="test_procedure">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="15" parent="12" name="username">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="16" parent="12" name="password">
+      <Position>2</Position>
+      <DataType>varchar(16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="12" name="fname">
+      <Position>3</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="12" name="mname">
+      <Position>4</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="19" parent="12" name="lname">
+      <Position>5</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <index id="20" parent="12" name="auth_tb_username_uindex">
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="21" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>username</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="22" parent="12" name="auth_tb_username_uindex">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>auth_tb_username_uindex</UnderlyingIndexName>
+    </key>
+    <column id="23" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="24" parent="13" name="roll">
+      <Position>2</Position>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="25" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
